@@ -1,0 +1,13 @@
+.squares {
+    display: grid;
+    grid-template-columns: repeat(2, 10px);
+    grid-template-rows: repeat(2, 10px);
+    gap: 2px;
+    width: 22px;
+    height: 22px;
+    &_square {
+        width: 10px;
+        height: 10px;
+      }
+  }
+  

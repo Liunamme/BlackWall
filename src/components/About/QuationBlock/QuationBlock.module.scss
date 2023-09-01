@@ -1,0 +1,64 @@
+@import '../../../styles/index.scss';
+
+.quationblock {
+    width: 522px;
+    height: 461px;
+    background-color: #ffffff;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 79.2%, 0% 100%);
+    &_quoteTop, &_quoteBot {
+            font-family: $defaultFont;
+            font-size: 98px;
+            font-stretch: expanded;
+            font-weight: 900;
+            -webkit-text-stroke: 1.2px #000000;
+            color: transparent;
+    }
+    &_quoteTop {
+        position: absolute;
+        top: 12.6px;
+        left: 110.4px;
+}
+    &_quoteBot {
+        transform: rotate(180deg);
+        position: absolute;
+        top: 185px;
+        left: 111px;
+    }
+
+    &_quotation {
+        @extend %TextBig;
+        position: absolute;
+        top: 86px;
+        left: 94px;
+        width: 399px;
+    }
+
+    &_personQuotation{
+        position: absolute;
+        left: 94px;
+        bottom: 175px;
+        &_photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &_person {
+            position: absolute;
+            top: 20px;
+            left: 96px;
+            &_initials {
+                @extend %TextBig;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &_jobPosition{
+                @extend %TextSmall;
+                position: absolute;
+                top: 22px;
+                left: 0;
+                opacity: 0.5;
+            }
+        }
+    }
+}

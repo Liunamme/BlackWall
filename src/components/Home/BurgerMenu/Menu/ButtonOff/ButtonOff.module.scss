@@ -1,0 +1,26 @@
+.btnClose {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 30px;
+    right: 43px;
+    cursor: pointer;
+    &_line {
+        position: absolute;
+        top: 10px;
+        left: -3px;
+        width: 30px;
+        height: 4px;
+        display: block;
+        background: #ffffff;
+        position: absolute;
+    
+        &:first-child {
+            transform: rotate(-45deg);
+        }
+    
+        &:last-child {
+            transform: rotate(45deg);
+        }
+    }
+}

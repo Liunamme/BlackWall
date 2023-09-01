@@ -1,0 +1,67 @@
+@import '../../../styles/index.scss';
+
+$transition-duration: 0.3s;
+
+.vacancy {
+    position: relative;
+    width: 378px;
+    height: 336px;
+    background: #000000;
+    color: #ffffff;
+    padding: 35px 32px 98px 32px;
+    clip-path: polygon(100% 100%, 100% 0, 0 0, 0 80%);
+    h4 {
+        @extend %H4;
+        width: 308px;
+        margin-bottom: 25px;
+    }
+    &_hardSkills{
+        @extend %TextBig;
+        margin-bottom: 19px;
+    }
+    &_conditions{
+        font-family: $defaultFont;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: expanded;
+        line-height: 125%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 31px;
+    }
+    &_textArrow {
+        display: flex;
+        gap: 19px;
+        &_text {
+            @extend %TextSmall;
+            transition: transform $transition-duration ease-in-out;
+        }
+        &_arrow {
+            transition: transform $transition-duration ease-in-out;
+        }
+        &::before {
+            position: absolute;
+            left: 0;
+            bottom: 94px;
+            content: url('/assets/media/other svg elements/Careers/arrow1.svg');
+            transform: translateX(-100%);
+            transition: transform $transition-duration ease-in-out;
+          }
+    }
+    &:hover {
+        .vacancy_textArrow {
+          &::before {
+            transform: translateX(10%);
+          }
+    
+          &_text {
+            transform: translateX(280%);
+          }
+    
+          &_arrow {
+            transform: translateX(130%);
+          }
+        }
+      }
+}

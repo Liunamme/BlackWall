@@ -1,0 +1,89 @@
+@import '../../styles/index.scss';
+
+footer {
+    position: relative;
+    background-color: #000000;
+    height: 436px;
+    width: 100vw;
+    clip-path: polygon(100% 100%, 100% 34.2%, 0 0, 0 100%);
+    padding-top: 174px;
+    .content {
+        display: flex;
+        height: 144px;
+        padding: 0 52px;
+        justify-content: space-between;
+        align-items: center;
+        &_info {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            width: 645px;
+            display: flex;
+            align-items: end;
+            &_email {
+                width: max-content;
+                height: max-content;
+                color: #ffffff;
+                font-family: $defaultFont;
+                font-size: 16px;
+                font-weight: 600;
+                font-stretch: ultra-expanded;
+                line-height: 100%;
+                border-bottom: 0.5px solid #ffffff;
+            }
+        }
+        &_copyright {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: 14px;
+            width: 100vw;
+            height: 21px;
+            p {
+                @extend %TextSmall;
+                color: #ffffff;
+                width: 353px;
+                height: 21px;
+                display: flex;
+                justify-content: center;
+                gap: 9px;
+                position: relative;
+                top: -4px;
+                img {
+                    position: relative;
+                    top: -2px;
+                }
+            }
+            &_arrowsLeft {
+                position: absolute;
+                left: 0;
+            }
+            &_arrowsRight {
+                position: absolute;
+                right: 0;
+            }
+        }
+        .navigation {
+            height: 120px;
+            &_links {
+                display: flex;
+                flex-wrap: wrap;
+                height: 100%;
+                width: 350px;
+                flex-direction: column;
+                row-gap: 22px;
+                column-gap: 110px;
+                color: #ffffff;
+                &_link {
+                    width: max-content;
+                    font-family: $defaultFont;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 100%;
+                    font-stretch: expanded;
+                    border-bottom: 1px solid #ffffff;
+                }
+            }
+        }
+    }
+}

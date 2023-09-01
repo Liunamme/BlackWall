@@ -1,0 +1,141 @@
+@import '../../styles/index.scss';
+
+.multiChainSupport {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 185px;
+    .ts {
+        position: relative;
+        left: 96px;
+        gap: 16px;
+        align-self: flex-start;
+    }
+    &_coins {
+        align-self: center;
+        margin-top: 81px;
+        position: relative;
+        width: 1218px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+        &_coinrow {
+            position: relative;
+            display: flex;
+            column-gap: 90px;
+            width: 100%;
+            justify-content: center;
+            &_coin {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 128px;
+                height: 128px;
+                background: #000000;
+                border-radius: 64px;
+                transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
+                transform-origin: center;
+                z-index: 1;
+                overflow: hidden;
+                color: #ffffff;
+                img {
+                    font-size: 0;
+                }
+                img::after {
+                    content: attr(alt);
+                    color: #ffffff;
+                    font-size: 30px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 128px;
+                    height: 128px;
+                   
+                  }
+                h4 {
+                    @extend %H4;
+                    max-width: 250px;
+                    position: absolute;
+                    left: 148px;
+                    top: 41px;
+                    opacity: 0;
+                }
+                a {
+                    max-width: 250px;
+                    position: absolute;
+                    top: 70px;
+                    left: 148px;
+                    font-stretch: expanded;
+                    border-bottom: 1px solid #ffffff;
+                    overflow-wrap: break-word;
+                    opacity: 0;
+                }
+            }
+            &_coin:last-child {
+                flex-direction: row-reverse;
+                h4 {
+                    left: 58px;
+                    top: 41px;
+                }
+                a {
+                    top: 70px;
+                    left: 58px;
+                }
+                img {
+                    font-size: 0;
+                }
+                img::after {
+                    content: attr(alt);
+                    color: #ffffff;
+                    font-size: 30px;
+                    position: absolute;
+                    right: -25%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 128px;
+                    height: 128px;
+                  }
+            }
+            &_coin:hover{
+                width: 404px;
+                z-index: 2;
+                h4 {
+                    opacity: 1;
+                    transition: all 0.5s ease-in-out;
+                }
+                a {
+                    opacity: 1;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+            &_coin:hover + &_coin {
+                margin-left: -276px;
+            }
+            &_coin:last-child:hover {
+                width: 404px;
+                margin-left: -276px;
+                z-index: 2;
+                img::after {
+                    content: attr(alt);
+                    color: #ffffff;
+                    font-size: 30px;
+                    position: absolute;
+                    right: -7.5%;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 128px;
+                    height: 128px;
+                  }
+            }
+        }
+        
+
+        
+    }
+}

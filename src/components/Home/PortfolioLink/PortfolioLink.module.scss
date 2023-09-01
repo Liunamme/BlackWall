@@ -1,0 +1,61 @@
+@import '../../../styles/index.scss';
+
+$transition-duration: 0.3s;
+
+.portfolio {
+  position: absolute;
+  right: 22px;
+  bottom: 40px;
+  width: 257px;
+  height: 186px;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 17px 15px;
+  overflow: hidden;
+
+  &__topText {
+    @extend %TextBig;
+  }
+
+  &__textArrow {
+    display: flex;
+    gap: 10px;
+
+    &_text {
+      @extend %TextSmall;
+      transition: transform $transition-duration ease-in-out;
+    }
+
+    &_arrow {
+      transition: transform $transition-duration ease-in-out;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      content: url('/assets/media/img/Home/arrow.svg');
+      transform: translateX(-100%);
+      transition: transform $transition-duration ease-in-out;
+    }
+  }
+
+  &:hover {
+    .portfolio__textArrow {
+      &::before {
+        transform: translateX(10%);
+      }
+
+      &_text {
+        transform: translateX(125%);
+      }
+
+      &_arrow {
+        transform: translateX(130%);
+      }
+    }
+  }
+}

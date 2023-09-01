@@ -1,0 +1,10 @@
+@import '../../../styles/index.scss';
+
+h3 {
+    span {
+        @extend %H3;
+    }
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

@@ -1,0 +1,121 @@
+@import '../../styles/index.scss';
+
+.areas {
+    position: relative;
+    width: 100%;
+    height: 645px;
+    &_background {
+    position: absolute;
+    top: -126px;
+    width: 100%;
+    height: 771px;
+    background-image: url('/assets/media/img/Areas/background.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    &_content {
+        height: 645px;
+        padding-top: 115px;
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+    &_blocks {
+        position: relative;
+        margin: 0px auto;
+        width: 1280px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(3, 360px);
+        grid-template-rows: repeat(2, 200px);
+        gap: 100px;
+        &_startBlock {
+            position: relative;
+            width: 360px;
+            height: 200px;
+            .ts {
+                position: absolute;
+                top: 35px;
+                left: 34px;
+                gap: 16px;
+            }
+            p {
+                @extend %TextMedium;
+                position: absolute;
+                top: 86.5px;
+                left: 37px;
+                width: 218px;
+                
+            }
+        }
+        &_block {
+            position: relative;
+            width: 360px;
+            height: 200px;
+            padding: 20px;
+            border: 2px solid #ffffff;
+            background-color: rgba(189, 189, 189, 0.1);
+            backdrop-filter: blur(6px);
+            h4 {
+                @extend %H4;
+                width: 245px;
+                position: absolute;
+                top: 31px;
+                left: 30px;
+            }
+            p {
+                font-family: $defaultFont;
+                width: 300px;
+                position: absolute;
+                top: 95px;
+                left: 30px;
+                white-space: pre;
+                font-weight: 400;
+                font-stretch: normal;
+                font-stretch: semi-expanded;
+                font-size: 15.55px;
+                line-height: 125%;
+            }
+            &:hover {
+                transition: all 0.4s ease-in-out;
+                background-color: #000000;
+                cursor: default;
+                
+                h4 {
+                    color: #ffffff;
+                    transition: all 0.4s ease-in-out;
+                }
+                
+                p {
+                    color: #ffffff;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+        }
+        &_arrow1 {
+            position: absolute;
+            top: 40px;
+            left: 233px;
+        }
+        &_arrow2 {
+            position: absolute;
+            top: 92px;
+            right: 354px;
+        }
+        &_arrow3 {
+            position: absolute;
+            top: 192px;
+            right: 175px;
+        }
+        &_arrow4 {
+            position: absolute;
+            bottom: 90px;
+            left: 352px;
+        }
+        &_arrow5 {
+            position: absolute;
+            bottom: 90px;
+            right: 352px;
+        }
+      }
+}

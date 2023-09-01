@@ -1,0 +1,44 @@
+@import '../../../../styles/index.scss';
+
+.inputs {
+    width: 100%;
+    height: 466px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  
+    &_input {
+      display: flex;
+      flex-direction: column;
+      gap: 10.55px;
+  
+      h6 {
+        @extend %TextMedium;
+      }
+  
+      input,
+      textArea {
+        @extend %TextSmall;
+        width: 100%;
+        border: 2px solid #000000;
+        padding-left: 9px;
+        padding-right: 9px;
+      }
+  
+      input {
+        height: 54px;
+      }
+  
+      input::placeholder,
+      textArea::placeholder {
+        color: #0000004d;
+      }
+  
+      textArea {
+        height: 203px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        resize: none;
+      }
+    }
+  }

@@ -1,0 +1,56 @@
+.linesGroup {
+    display: flex;
+}
+
+.lines {
+    display: flex;
+    width: 120px;
+    height: 122px;
+    &_line1{
+        height: 100%;
+        width: 15.38px;
+        background-color: #000000;
+    }
+    &_line2{
+        height: 100%;
+        width: 13.4px;
+        background-color: #000000;
+        margin-left: 1.8px;
+    }
+    &_line3{
+        height: 100%;
+        width: 11.43px;
+        background-color: #000000;
+        margin-left: 3.6px;
+    }
+    &_line4{
+        height: 100%;
+        width: 9.46px;
+        background-color: #000000;
+        margin-left: 5.1px;
+    }
+    &_line5{
+        height: 100%;
+        width: 7.48px;
+        background-color: #000000;
+        margin-left: 7.8px;
+    }
+    &_line6{
+        height: 100%;
+        width: 5.49px;
+        background-color: #000000;
+        margin-left: 9.5px;
+    }
+    &_line7{
+        height: 100%;
+        width: 3.52px;
+        background-color: #000000;
+        margin-left: 11.4px;
+    }
+    &_line8{
+        height: 100%;
+        width: 1.54px;
+        background-color: #000000;
+        margin-left: 13.5px;
+    }
+}

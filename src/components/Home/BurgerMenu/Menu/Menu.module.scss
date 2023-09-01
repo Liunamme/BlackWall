@@ -1,0 +1,46 @@
+@import '../../../../styles/index.scss';
+
+.menu {
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 720px;
+    height: 100vh;
+    background: #000000;
+    z-index: 9;
+    transition: transform 0.3s ease; /* Добавлено плавное переход */
+
+    &.active {
+        transform: translateX(0%);
+    }
+
+    &_logo {
+        position: absolute;
+        top: 89px;
+        left: 37px;
+    }
+
+    &_decorate {
+        position: absolute;
+        bottom: 44px;
+        left: 37px;
+    }
+
+    &_email {
+        position: absolute;
+        bottom: 44px;
+        right: 43px;
+        font-family: $defaultFont;
+	    font-size: 40px;
+	    font-weight: 600;
+        line-height: 100%;
+	    font-stretch: expanded;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+}

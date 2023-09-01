@@ -1,0 +1,40 @@
+@import '../../../styles/index.scss';
+
+.info {
+    display: flex;
+    align-items: center;
+    width: 720px;
+    height: 100%;
+    &_logoText {
+        display: flex;
+        gap: 76px;
+        align-items: center;
+        &_text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 398px;
+            height: 155px;
+
+            h4 {
+                @extend %H4;
+            }
+            p {
+                @extend %TextMedium;
+            }
+        }
+    }
+}
+
+
+.linesGroup1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.linesGroup2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

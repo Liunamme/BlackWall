@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+.contactUs {
+    position: relative;
+    width: 100%;
+    height: 925px;
+    padding-top: 232px;
+    padding-left: 96px;
+    &_form {
+        position: relative;
+        top: -4px;
+        width: 100%;
+        height: 668px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.horizontalLines {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ts {
+    gap: 16px;
+}

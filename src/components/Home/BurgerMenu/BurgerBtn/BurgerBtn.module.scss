@@ -1,0 +1,68 @@
+.burgerMenuBtn {
+    position: fixed;
+    top: 40px;
+    right: 43px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    .line {
+        width: 30px;
+        height: 4px;
+        background-color: #000000;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.burgerMenuBtn::before {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    z-index: -1;
+    content: '';
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.active::before {
+    display: none;
+}
+
+.active {
+    position: fixed;
+    top: 30px;
+    right: 43px;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    .line {
+        position: absolute;
+        top: 10px;
+        left: -3px;
+        width: 30px;
+        height: 4px;
+        display: block;
+        background: #ffffff;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        &:nth-of-type(1) {
+            transform: rotate(-45deg);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:nth-of-type(2) {
+            display: none;
+        }
+    
+        &:nth-of-type(3) {
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

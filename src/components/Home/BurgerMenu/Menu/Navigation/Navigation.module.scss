@@ -1,0 +1,21 @@
+@import '../../../../../styles/index.scss';
+
+.navigation {
+    position: absolute;
+    top: 86px;
+    right: 43px;
+    &_links {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 21px;
+        &_link {
+            font-family: $defaultFont;
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 100%;
+            font-stretch: expanded;
+            border-bottom: 3px solid #ffffff;
+        }
+    }
+}
